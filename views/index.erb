@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Hangman</title>
+    <link href="/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Federant" rel="stylesheet">
+  </head>
+  <body>
+    <div class="main">
+      <header>
+        <h1>Hangman</h1>
+      </header>
+      <div class="game-left">
+        <p class="display"><%= @word_display %></p>
+        <p>Used Letters</p>
+        <p class="used"><%= @used_letters %></p>
+        <form>
+          <input type="text" name="guess" /><br><br>
+          <input type="submit" value="Guess!"/>
+        </form>
+        <p>Guesses Remaining: <%= @guesses_remaining %></p>
+        <p><%= @results %></p>
+      </div>
+      <div class="game-right">
+        <div class="game-image">
+          <img src="<%= @hm_image %>" height="500px" width="300px">
+        </div>
+      </div>
+      <footer>
+        <h1>Check out the source code <a href="https://github.com/rgee258/hangman-sinatra" target="_blank">here</a></h1>
+      </footer>
+    </div>
+  </body>
+</html>
